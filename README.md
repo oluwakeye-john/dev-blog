@@ -8,6 +8,8 @@
   Gatsby's blog starter with Bootstrap
 </h1>
 
+*UI is not designed as this is meant to be a bare minimum. You therefore have to implement your own design*
+
 By oluwakeyejohn
 
 ## Featured
