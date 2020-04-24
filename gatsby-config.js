@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Oluwakeye John`,
+      summary: `Just Trying to make the web a better place.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `My blog.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `oluwakeyejohn`,
     },
   },
   plugins: [
@@ -42,7 +42,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image";
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title
@@ -24,6 +24,7 @@ const BlogIndex = ({ data, location }) => {
                                 </Link>
                             </h3>
                             <small>{node.frontmatter.date}</small>
+                            {/*<Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />*/}
                         </header>
                         <section>
                             <p
@@ -59,6 +60,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
