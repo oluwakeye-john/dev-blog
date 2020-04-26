@@ -3,7 +3,7 @@ import './TableOfContent.scss'
 
 export default ({tableOfContents}) => (
     <div className="position-fixed">
-        <div className="container-fluid" >
+        <div className="container-fluid text-left" >
             <br />
             <h4 className="text-center">Table Of Content</h4>
             <hr /><br />

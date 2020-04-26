@@ -12,7 +12,7 @@ export default ({node, defaultImage}) => {
         : ""
     return (
         <div className="col-lg-4">
-            <div className="container-fluid">
+            <div className="">
                 <div className="card rounded">
                     <Link to={node.fields.slug}>
                         {

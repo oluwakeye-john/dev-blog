@@ -1,5 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   //font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   //font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-family: Roboto;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar{
+    display: none;
+  }
+}
+
+.pageScroll {
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
 }

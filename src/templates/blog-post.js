@@ -1,13 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
 import PostHead from "../components/PostHead/PostHead";
 import PostExtras from "../components/PostExtras/PostExtras";
 import TableOfContent from "../components/TableOfContent/TableOfContent";
+import PostLeftSide from "../components/PostLeftSide";
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.markdownRemark
@@ -20,18 +19,24 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 title={post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
             />
-            <div className="row text-left">
+            <div className="row">
                 <div className="col-lg-2">
-
+                    <div className="sidebar">
+                        <PostLeftSide post={post} previous={previous} next={next} />
+                    </div>
                 </div>
-                <div className="col-lg-7">
+
+                <div className="col-lg-7 text-left">
                     <PostHead post={post} data={data} />
                     <section dangerouslySetInnerHTML={{ __html: post.html }} />
                     <hr/>
                     <PostExtras previous={previous} next={next} />
                 </div>
+
                 <div className="col-lg-3">
-                    <TableOfContent tableOfContents={post.tableOfContents} />
+                    <div className="sidebar">
+                        <TableOfContent tableOfContents={post.tableOfContents} />
+                    </div>
                 </div>
             </div>
         </Layout>
@@ -48,11 +53,11 @@ export const pageQuery = graphql`
       }
     }
     
-    file(relativePath: { eq: "default2.jpg" }) {
+    file(relativePath: { eq: "default3.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -70,7 +75,7 @@ export const pageQuery = graphql`
         tags
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 2000) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid
             }
           }

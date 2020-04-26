@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image";
 import AllPosts from "../components/AllPosts/AllPosts";
+import MainSideBar from "../MainSideBar";
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title
@@ -17,6 +18,9 @@ const BlogIndex = ({ data, location }) => {
             <div className="row">
                 <div className="col-lg-10">
                     <AllPosts posts={posts} defaultImage={data.file.childImageSharp.fluid} />
+                </div>
+                <div className="col-lg-2">
+                    <MainSideBar />
                 </div>
             </div>
         </Layout>
@@ -33,7 +37,7 @@ export const pageQuery = graphql`
       }
     }
     
-    file(relativePath: { eq: "default2.jpg" }) {
+    file(relativePath: { eq: "default3.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
