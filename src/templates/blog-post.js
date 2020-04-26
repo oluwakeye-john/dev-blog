@@ -5,6 +5,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
+import PostHead from "../components/PostHead/PostHead";
+import PostExtras from "../components/PostExtras/PostExtras";
+import TableOfContent from "../components/TableOfContent/TableOfContent";
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.markdownRemark
@@ -17,46 +20,20 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 title={post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
             />
-            <article>
-                <header>
-                    <h1>
-                        {post.frontmatter.title}
-                    </h1>
-                    <p>
-                        {post.frontmatter.date} - {post.timeToRead} min read
-                    </p>
-                    {
-                        post.frontmatter.tags.split(' ').map(tag => (
-                            <span className="badge badge-success"> {tag} </span>
-                        ))
-                    }
-                    <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
-                </header>
-                <section dangerouslySetInnerHTML={{ __html: post.html }} />
-                <hr/>
-                <footer>
-                    <Bio />
-                </footer>
-            </article>
+            <div className="row text-left">
+                <div className="col-lg-2">
 
-            <nav>
-                <ul>
-                    <li>
-                        {previous && (
-                            <Link to={previous.fields.slug} rel="prev">
-                                ← {previous.frontmatter.title}
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {next && (
-                            <Link to={next.fields.slug} rel="next">
-                                {next.frontmatter.title} →
-                            </Link>
-                        )}
-                    </li>
-                </ul>
-            </nav>
+                </div>
+                <div className="col-lg-7">
+                    <PostHead post={post} data={data} />
+                    <section dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <hr/>
+                    <PostExtras previous={previous} next={next} />
+                </div>
+                <div className="col-lg-3">
+                    <TableOfContent tableOfContents={post.tableOfContents} />
+                </div>
+            </div>
         </Layout>
     )
 }
@@ -70,6 +47,17 @@ export const pageQuery = graphql`
         title
       }
     }
+    
+    file(relativePath: { eq: "default2.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
@@ -82,7 +70,7 @@ export const pageQuery = graphql`
         tags
         featuredImage {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 2000) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -4,6 +4,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image";
+import AllPosts from "../components/AllPosts/AllPosts";
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title
@@ -11,31 +12,13 @@ const BlogIndex = ({ data, location }) => {
 
     return (
         <Layout location={location} title={siteTitle}>
-            <SEO title="All posts" />
-            <Bio />
-            {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug
-                return (
-                    <article key={node.fields.slug}>
-                        <header>
-                            <h3>
-                                <Link to={node.fields.slug}>
-                                    {title}
-                                </Link>
-                            </h3>
-                            <small>{node.frontmatter.date}</small>
-                            {/*<Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />*/}
-                        </header>
-                        <section>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: node.frontmatter.description || node.excerpt,
-                                }}
-                            />
-                        </section>
-                    </article>
-                )
-            })}
+            <SEO title="Home" />
+            {/*<Bio />*/}
+            <div className="row">
+                <div className="col-lg-10">
+                    <AllPosts posts={posts} defaultImage={data.file.childImageSharp.fluid} />
+                </div>
+            </div>
         </Layout>
     )
 }
@@ -49,6 +32,17 @@ export const pageQuery = graphql`
         title
       }
     }
+    
+    file(relativePath: { eq: "default2.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {

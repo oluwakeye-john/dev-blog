@@ -1,21 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
+import Navbar from "./Navbar/Navbar";
+import './layout.scss'
+import Footer from "./Footer/Footer";
 
 const Layout = ({ title, children }) => {
     return (
         <div>
-            <h1>
-                <Link to={`/`}
-                >
-                    {title}
-                </Link>
-            </h1>
-            <main>{children}</main>
-            <footer>
-                © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
+            <Navbar title={title} />
+            <main>
+                <div className="container-fluid text-center">
+                    {children}
+                </div>
+            </main>
+            <Footer />
         </div>
     )
 }

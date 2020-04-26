@@ -1,6 +1,8 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+description: This is yet another post which specifies how much my blog means to me. Yes, it does
+featuredImage: ../../assets/default1.jpg
 ---
 
 Wow! I love blogging so much already.
