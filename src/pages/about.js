@@ -20,10 +20,10 @@ export default ({data, location}) => {
                             <br />
                             <h1>{author.name}</h1>
                             <hr /><br />
-                            <p> <span className="fas fa-tools"> </span> Fullstack web developer</p>
-                            <p><span className="fas fa-home"> </span> Lives in Lagos, Nigeria</p>
+                            <p> <span className="fas fa-tools"> </span> {author.work}</p>
+                            <p><span className="fas fa-home"> </span> {author.address}</p>
                             <p><span className="fas fa-envelope"> </span>
-                                <a href="mailto:bjohnoluwakeye@gmail.com"> bjohnoluwakeye@gmail.com</a>
+                                <a href={`mailto:${social.email}`}> ${social.email}</a>
                             </p>
                             <br/>
                             <SocialButtons />
@@ -52,9 +52,11 @@ export const query = graphql`
           author {
             name
             summary
+            work
+            address
           }
           social {
-            twitter
+            email
           }
         }
       }

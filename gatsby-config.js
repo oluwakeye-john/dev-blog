@@ -4,13 +4,16 @@ module.exports = {
         author: {
             name: `Oluwakeye John`,
             summary: `Just Trying to make the web a better place.`,
+            work: `Fullstack web developer`,
+            address: `Lives in Lagos, Nigeria`
         },
         description: `My blog.`,
         siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
         social: {
             twitter: `oluwakeyejohn`,
             github: `oluwakeye-john`,
-            medium: `@oluwakeyejohn`
+            medium: `@oluwakeyejohn`,
+            email: `bjohnoluwakeye@gmail.com`
         },
     },
     plugins: [
