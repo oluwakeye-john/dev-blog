@@ -21,9 +21,23 @@ body{
   }
 }
 
-.pageScroll {
+.pageScrollButton {
   opacity: 0;
   transition: opacity 0.9s ease-in-out;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: forestgreen;
+  border-radius: 30%;
+  border-color: black;
+
+  a {
+    color: white;
+  }
+}
+
+.subScribe {
+
 }
 
 .aboutPage {
@@ -33,4 +47,16 @@ body{
 
 .aboutPage:hover{
   box-shadow: 0 0 10px deepskyblue;
+}
+
+.subscribeButton {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #007BFF;
+  border-radius: 20%;
+
+  a{
+    color: white;
+  }
 }

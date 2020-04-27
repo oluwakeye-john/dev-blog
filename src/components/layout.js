@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Navbar from "./Navbar/Navbar";
 import './layout.scss'
 import Footer from "./Footer/Footer";
-import FixedScroll from "./FixedScroll";
+import FixedButtons from "./FixedButtons";
 
 export default ({title, children}) =>  (
     <div id="pageTop">
@@ -14,6 +14,6 @@ export default ({title, children}) =>  (
             </div>
         </main>
         <Footer />
-        <FixedScroll />
+        <FixedButtons />
     </div>
 )
