@@ -5,6 +5,6 @@ export default () => (
     <footer className="bg-dark">
         © {new Date().getFullYear()}, Built with love by
         {` `}
-        <a href="https://www.gatsbyjs.org">oluwakeyejohn</a>
+        <a target="_blank" href="https://github.com/oluwakeye-john">oluwakeyejohn</a>
     </footer>
 )
