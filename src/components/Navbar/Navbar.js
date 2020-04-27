@@ -22,9 +22,6 @@ export default ({title}) => (
                     <li className="nav-item">
                         <Link to={'contact'} className="nav-link">Contact</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to={'/tags'} className="nav-link" href="#">Tags</Link>
-                    </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0" onSubmit={ (e) => e.preventDefault()}>
                     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required />

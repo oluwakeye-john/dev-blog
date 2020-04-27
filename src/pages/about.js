@@ -3,6 +3,7 @@ import Bio from '../components/bio'
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import Img from 'gatsby-image'
+import SocialButtons from "../components/SocialButtons";
 
 export default ({data, location}) => {
     const { author, social } = data.site.siteMetadata
@@ -22,15 +23,10 @@ export default ({data, location}) => {
                             <p> <span className="fas fa-tools"> </span> Fullstack web developer</p>
                             <p><span className="fas fa-home"> </span> Lives in Lagos, Nigeria</p>
                             <p><span className="fas fa-envelope"> </span>
-                                <a href="mailto:bjohnoluwakeye@gmail.com">bjohnoluwakeye@gmail.com</a>
+                                <a href="mailto:bjohnoluwakeye@gmail.com"> bjohnoluwakeye@gmail.com</a>
                             </p>
                             <br/>
-
-                            <span>
-                                <a href="https://twitter.com/oluwakeyejohn" style={{color: "#50ABF1"}}><span className="fab fa-twitter fa-2x mr-3"> </span></a>
-                                <a href="https://github.com/oluwakeye-john" style={{color: "black"}}><span className="fab fa-github fa-2x mr-3"> </span></a>
-                                <a href="https://twitter.com/oluwakeyejohn" style={{color: "black"}}><span className="fab fa-medium fa-2x mr-3"> </span></a>
-                            </span>
+                            <SocialButtons />
                         </div>
                     </div>
                 </div>
