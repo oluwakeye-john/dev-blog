@@ -26,11 +26,11 @@ body{
   transition: opacity 0.9s ease-in-out;
 }
 
-//code{
-//  margin: 0 2px;
-//  padding: 0 5px;
-//  white-space: nowrap;
-//  border: 1px solid #eaeaea;
-//  background-color: #f8f8f8;
-//  border-radius: 3px;
-//}
+.aboutPage {
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.aboutPage:hover{
+  box-shadow: 0 0 10px deepskyblue;
+}

@@ -4,8 +4,8 @@ import Layout from '../components/layout'
 
 export default () => (
     <Layout title={'title'}>
-        <SEO title={'Contact Us'} />
-        <h1>Contact Us</h1>
+        <SEO title={'Contact'} />
+        <h1>Contact</h1>
         <hr /><br />
         <div className="row text-center">
             <div className="col-lg-4">
