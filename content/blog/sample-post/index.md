@@ -3,6 +3,7 @@ title: Sample Post
 date: "2020-04-26"
 description: Here is another sample blog about the use of markdown
 tags: hello,world
+featuredImage: timothy-dykes.jpg
 ---
 
 An h1 header

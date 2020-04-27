@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 export default ({post, previous, next}) => (
-    <div className="position-fixed">
+    <div className="position-fixed " style={{width: "220px"}}>
         <div className="container-fluid" >
             <br />
             <h4 className="text-center">{post.frontmatter.title}</h4>
