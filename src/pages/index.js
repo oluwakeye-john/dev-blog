@@ -1,11 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import Bio from "../components/bio"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image";
 import AllPosts from "../components/AllPosts/AllPosts";
-import MainSideBar from "../MainSideBar";
+import MainSideBar from "../components/MainSideBar";
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title
@@ -14,7 +12,6 @@ const BlogIndex = ({ data, location }) => {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO title="Home" />
-            {/*<Bio />*/}
             <div className="row">
                 <div className="col-lg-10">
                     <AllPosts posts={posts} defaultImage={data.file.childImageSharp.fluid} />
