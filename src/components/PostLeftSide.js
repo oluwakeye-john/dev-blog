@@ -9,6 +9,7 @@ export default ({post, previous, next}) => (
             <hr /><br />
             <p className="text-left">Date: {post.frontmatter.date}</p>
             <p className="text-left">{post.timeToRead} min read</p>
+            <p className="text-left">By {post.frontmatter.author || 'Blogger'}</p>
 
             <hr /><br />
 

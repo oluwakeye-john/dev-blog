@@ -20,7 +20,7 @@ export default ({title}) => (
                         <Link to={'about'} className="nav-link">About</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Contact</a>
+                        <Link to={'contact'} className="nav-link">Contact</Link>
                     </li>
                     <li className="nav-item">
                         <Link to={'/tags'} className="nav-link" href="#">Tags</Link>

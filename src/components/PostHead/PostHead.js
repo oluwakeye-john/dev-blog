@@ -21,6 +21,9 @@ export default ({post, data}) => (
         <p>
             {post.frontmatter.date} - {post.timeToRead} min read
         </p>
+        <p>
+            By {post.frontmatter.author || 'Blogger' }
+        </p>
         {
             post.frontmatter.tags
             &&
