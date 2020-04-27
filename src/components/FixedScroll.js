@@ -28,7 +28,7 @@ class FixedScroll extends Component {
         return (
             <div style={{opacity: this.state.name}} className="pageScroll" >
                 <a href="#pageTop" className="btn rounded-circle" style={{position: "fixed", bottom: "10px", right: "10px", backgroundColor: "deepskyblue"}}>
-                    &#x25B2;
+                    <span className="fas fa-chevron-up"></span>
                 </a>
             </div>
         );

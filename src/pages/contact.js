@@ -11,15 +11,15 @@ export default () => (
             <div className="col-lg-4">
             </div>
             <div className="col-lg-4">
-                <form className="text-left">
+                <form className="text-left" onSubmit={(e) => e.preventDefault()}>
                     <label htmlFor="name">Name</label>
-                    <input type={'text'} id="name" className="form-control" placeholder={'Name'} required />
+                    <input type={'text'} id="name" className="form-control" placeholder={'John Doe'} required name={"name"} />
                     <br />
                     <label htmlFor="name">Email</label>
-                    <input type={'email'} className="form-control" placeholder={'Email'} required />
+                    <input type={'email'} className="form-control" placeholder={'mail@email.com'} required name={'email'} />
                     <br />
                     <label htmlFor="name">Message</label>
-                    <textarea placeholder={'Message'} className="form-control" required >
+                    <textarea placeholder={'Type message here'} className="form-control" required name={'message'} >
 
                     </textarea>
                     <br />
