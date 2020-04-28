@@ -20,6 +20,7 @@ const BlogIndex = ({ data, location }) => {
                     <MainSideBar />
                 </div>
             </div>
+            <br /><br />
         </Layout>
     )
 }

@@ -31,11 +31,11 @@ class FixedButtons extends Component {
                         <span className="fas fa-chevron-up"> </span>
                     </a>
                 </div>
-                <div className="subscribeButton">
-                    <a href="#" className="btn">
-                        <span className="fas fa-envelope" style={{bottom: "10px", left: "10px"}}> </span>
-                    </a>
-                </div>
+                {/*<div className="subscribeButton">*/}
+                {/*    <a href="#" className="btn">*/}
+                {/*        <span className="fas fa-envelope" style={{bottom: "10px", left: "10px"}}> </span>*/}
+                {/*    </a>*/}
+                {/*</div>*/}
 
             </div>
         );

@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
+import {Link} from "gatsby";
 
 export default ({post, data}) => (
     <header>
@@ -22,7 +23,7 @@ export default ({post, data}) => (
             {post.frontmatter.date} - {post.timeToRead} min read
         </p>
         <p>
-            By {post.frontmatter.author || 'Blogger' }
+            By <Link to={'about'}>{post.frontmatter.author || 'Blogger' }</Link>
         </p>
         {
             post.frontmatter.tags

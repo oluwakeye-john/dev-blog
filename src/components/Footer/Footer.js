@@ -1,6 +1,6 @@
 import React from "react";
 import './Footer.scss'
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 export default () => {
     const { site } = useStaticQuery(
@@ -26,7 +26,7 @@ export default () => {
         <footer className="bg-dark">
             © {new Date().getFullYear()}, Built with love by
             {` `}
-            <a href="https://github.com/oluwakeye-john">{site.siteMetadata.author.name}</a>
+            <Link to={'about'} >{site.siteMetadata.author.name}</Link>
         </footer>
     );
 }

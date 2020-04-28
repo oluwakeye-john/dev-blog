@@ -1,11 +1,12 @@
 import React from "react";
+import SocialButtons from "./SocialButtons";
 
 export default () => (
     <div className="">
         <br /><br />
-        <h2 className="text-center">Hello world</h2>
+        <h2 className="text-center">Hi there!</h2>
         <hr />
-        <p>Hello world</p>
-        <p>This is a nice post</p>
+
+        <SocialButtons />
     </div>
 )

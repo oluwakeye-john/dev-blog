@@ -9,7 +9,8 @@ export default ({node, defaultImage}) => {
         ? node.frontmatter.description.length >= 60
             ? (node.frontmatter.description || node.excerpt).slice(0, 60) + "..."
             : node.frontmatter.description || node.excerpt
-        : ""
+        : (node.excerpt).slice(0, 60) + "..."
+
     return (
         <div className="col-lg-4">
             <div className="">
@@ -17,8 +18,8 @@ export default ({node, defaultImage}) => {
                     <Link to={node.fields.slug}>
                         {
                             node.frontmatter.featuredImage
-                                ? <Img className="card-img-top img-fluid bbb rounded"  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}/>
-                                : <Img className="card-img-top img-fluid bbb rounded" fluid={defaultImage} />
+                                ? <Img className="card-img-top img-fluid bbb "  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}/>
+                                : <Img className="card-img-top img-fluid bbb" fluid={defaultImage} />
 
                         }
                     </Link>
