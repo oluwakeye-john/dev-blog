@@ -1,6 +1,7 @@
 import React from "react";
 import './Navbar.scss'
 import {Link} from 'gatsby'
+import SocialButtons from "../SocialButtons";
 
 export default ({title}) => (
     <nav className="navbar navbar-expand-lg navbar-light shadow-sm sticky-top ">
@@ -13,20 +14,12 @@ export default ({title}) => (
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto"  data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <li className="nav-item">
-                        <Link to={'/'} className="nav-link">Home</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to={'about'} className="nav-link">About</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to={'contact'} className="nav-link">Contact</Link>
-                    </li>
+                    <Link to={'/'} activeClassName={'active'} className="nav-link">Home</Link>
+                    <Link to={'about'} activeClassName={'active'} className="nav-link">About</Link>
+                    <Link to={'contact'} activeClassName={'active'} className="nav-link">Contact</Link>
+
                 </ul>
-                <form className="form-inline my-2 my-lg-0" onSubmit={ (e) => e.preventDefault()}>
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required />
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <SocialButtons />
             </div>
         </div>
     </nav>
