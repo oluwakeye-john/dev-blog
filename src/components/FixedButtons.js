@@ -27,7 +27,7 @@ class FixedButtons extends Component {
         return (
             <div>
                 <div style={{opacity: this.state.name}} className="pageScrollButton" >
-                    <a href="#pageTop" className="btn">
+                    <a href="#pageTop" className="">
                         <span className="fas fa-chevron-up"> </span>
                     </a>
                 </div>

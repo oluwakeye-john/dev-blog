@@ -1,5 +1,4 @@
 import React from "react";
-import Bio from '../components/bio'
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import Img from 'gatsby-image'
@@ -26,6 +25,9 @@ export default ({data, location}) => {
                             <p><span className="fas fa-envelope"> </span>
                                 <a href={`mailto:${social.email}`}> {social.email}</a>
                             </p>
+                            <p><span className="fas fa-location-arrow"> </span>
+                                <a href="https://oluwakeyejohn.netlify.app"> oluwakeyejohn.netlify.app</a>
+                            </p>
                             <br/>
                             <SocialButtons />
                             <br /><br />
@@ -43,7 +45,7 @@ export const query = graphql`
   {
     avatar: file(absolutePath: { regex: "/profilepix.jpg/" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -7,7 +7,7 @@ export default () => (
         <SEO title={'Contact'} />
         <h1>Contact</h1>
         <hr /><br />
-        <div className="row text-center">
+        <div className="row text-center text-muted">
             <div className="col-lg-4">
             </div>
             <div className="col-lg-4">
@@ -19,11 +19,11 @@ export default () => (
                     <input type={'email'} className="form-control" placeholder={'mail@email.com'} required name={'email'} />
                     <br />
                     <label htmlFor="name">Message</label>
-                    <textarea placeholder={'Type message here'} className="form-control" required name={'message'} >
+                    <textarea rows={6} placeholder={'Type message here'} className="form-control" required name={'message'} >
 
                     </textarea>
-                    <br />
-                    <input type='submit' className='btn btn-success form-control' />
+                    <br /><br />
+                    <input type='submit' className='btn btn-success' />
                 </form>
                 <br />
             </div>
