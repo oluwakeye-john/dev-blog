@@ -26,11 +26,11 @@ class FixedButtons extends Component {
     render() {
         return (
             <div>
-                <div style={{opacity: this.state.name}} className="pageScrollButton" >
-                    <a href="#pageTop" className="">
+                <a href="#pageTop" className="" style={{color: "white"}}>
+                    <div style={{opacity: this.state.name}} className="pageScrollButton" >
                         <span className="fas fa-chevron-up"> </span>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 {/*<div className="subscribeButton">*/}
                 {/*    <a href="#" className="btn">*/}
                 {/*        <span className="fas fa-envelope" style={{bottom: "10px", left: "10px"}}> </span>*/}

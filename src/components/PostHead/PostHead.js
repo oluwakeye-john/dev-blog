@@ -29,7 +29,7 @@ export default ({post, data}) => (
             post.frontmatter.tags
             &&
             post.frontmatter.tags.split(',').map((tag, index) => (
-                <span key={index} style={{fontSize: "18px"}} className="badge badge-success mr-1"> {tag} </span>
+                <span key={index} style={{fontSize: "16px"}} className="badge badge-success mr-1"> {tag} </span>
             ))
         }
         <hr /><br />

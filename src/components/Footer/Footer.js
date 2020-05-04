@@ -26,7 +26,7 @@ export default () => {
         <footer className="bg-dark">
             © {new Date().getFullYear()}, Built with love by
             {` `}
-            <Link to={'about'} >{site.siteMetadata.author.name}</Link>
+            <a href="https://oluwakeyejohn.netlify.app" >{site.siteMetadata.author.name}</a>
         </footer>
     );
 }
