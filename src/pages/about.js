@@ -45,7 +45,7 @@ export const query = graphql`
   {
     avatar: file(absolutePath: { regex: "/profilepix.jpg/" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid{
             ...GatsbyImageSharpFluid
           }
         }

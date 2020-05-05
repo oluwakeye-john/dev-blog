@@ -4,7 +4,7 @@ author: Oluwakeye John
 featuredImage: beginning.jpg
 date: 2020-04-27
 description: This blog gives a brief explanation of markdown syntax 
-tags: markdown
+tags: md
 ---
 
 ### Headings

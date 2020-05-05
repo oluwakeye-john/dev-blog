@@ -16,7 +16,7 @@ export default ({post, data}) => (
             </div>
         </div>
         <hr />
-        <h1>
+        <h1 className="text-muted" style={{fontFamily: "Roboto Black"}}>
             {post.frontmatter.title}
         </h1>
         <p>
