@@ -25,50 +25,15 @@ export default ({node, defaultImage}) => {
                     </Link>
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
-
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: description,
-                            }}
-                        />
+                        <span dangerouslySetInnerHTML={{ __html: description, }}/>
                     </div>
 
                     <div className="card-footer">
                         <small className="text-muted">Last updated {node.frontmatter.date}</small>
                     </div>
                 </div>
-                <br />
+                <br /><br />
             </div>
         </div>
-
-        // <article key={node.fields.slug}>
-        //     <header>
-        //         <h3>
-        //             <Link to={node.fields.slug}>
-        //                 {title}
-        //             </Link>
-        //         </h3>
-        //         <small>{node.frontmatter.date}</small>
-        //
-        //     </header>
-        //     <section>
-        //         <p
-        //             dangerouslySetInnerHTML={{
-        //                 __html: node.frontmatter.description || node.excerpt,
-        //             }}
-        //         />
-        //     </section>
-        // </article>
-
-
-        // <div className="card bg-dark text-white">
-        //     <img src="..." className="card-img" alt="...">
-        //         <div className="card-img-overlay">
-        //             <h5 className="card-title">Card title</h5>
-        //             <p className="card-text">This is a wider card with supporting text below as a natural lead-in to
-        //                 additional content. This content is a little bit longer.</p>
-        //             <p className="card-text">Last updated 3 mins ago</p>
-        //         </div>
-        // </div>
     )
 }

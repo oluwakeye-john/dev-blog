@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export default ({post, previous, next}) => (
+export default ({post, previous, next, author}) => (
     <div className="position-fixed " style={{width: "220px"}}>
         <div className="container-fluid" >
             <br />
@@ -9,7 +9,7 @@ export default ({post, previous, next}) => (
             <hr /><br />
             <p className="text-left">Date: {post.frontmatter.date}</p>
             <p className="text-left">{post.timeToRead} min read</p>
-            <p className="text-left">By {post.frontmatter.author || 'Blogger'}</p>
+            <p className="text-left">By {post.frontmatter.author || author.name}</p>
 
             <hr /><br />
 

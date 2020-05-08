@@ -25,8 +25,8 @@
 //    line-height: 27px;
 //  }
 //}
+@import "../variables";
 
 .navbar {
-  background-color: white;
-  opacity: 0.98;
+  background-color: $primary-color;
 }

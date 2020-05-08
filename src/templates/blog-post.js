@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import {  graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.markdownRemark
     const siteTitle = data.site.siteMetadata.title
     const { previous, next } = pageContext
+    const author = data.site.siteMetadata.author
 
     return (
         <Layout title={siteTitle}>
@@ -22,12 +23,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <div className="row">
                 <div className="col-lg-2">
                     <div className="sidebar">
-                        <PostLeftSide post={post} previous={previous} next={next} />
+                        <PostLeftSide post={post} previous={previous} next={next} author={author} />
                     </div>
                 </div>
 
                 <div className="col-lg-7 text-left">
-                    <PostHead post={post} data={data} />
+
+                    <PostHead post={post} data={data} author={author} />
                     <section dangerouslySetInnerHTML={{ __html: post.html }} />
                     <hr/>
                     <PostExtras previous={previous} next={next} />
@@ -50,10 +52,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+            name
+        }
       }
     }
     
-    file(relativePath: { eq: "default3.jpg" }) {
+    file(relativePath: { eq: "default.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
@@ -73,9 +78,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        author
         description
-        tags
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1200) {

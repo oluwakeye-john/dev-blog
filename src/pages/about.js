@@ -13,12 +13,13 @@ export default ({data, location}) => {
             <div className="container">
                 <div className=" row">
                     <div className="col-lg-4">
-                        <Img className="img-fluid aboutPage" fluid={data.avatar.childImageSharp.fluid}/>
+                        <br />
+                        <Img style={{margin: "auto 0"}} className="img-fluid aboutPageImage" fluid={data.avatar.childImageSharp.fluid}/>
                     </div>
                     <div className="col-lg-6">
                         <div className="container text-center">
                             <br />
-                            <h1>{author.name}</h1>
+                            <h1 className="text-muted">{author.name}</h1>
                             <hr /><br />
                             <p> <span className="fas fa-tools"> </span> {author.work}</p>
                             <p><span className="fas fa-home"> </span> {author.address}</p>
@@ -26,17 +27,17 @@ export default ({data, location}) => {
                                 <a href={`mailto:${social.email}`}> {social.email}</a>
                             </p>
                             <p><span className="fas fa-location-arrow"> </span>
-                                <a href="https://oluwakeyejohn.netlify.app"> oluwakeyejohn.netlify.app</a>
+                                <a href="https://oluwakeyejohn.netlify.app"> {author.website}</a>
                             </p>
                             <br/>
-                            <SocialButtons />
-                            <br /><br />
+                            <SocialButtons size="big" />
+                            <br />
                             <Link to={'contact'} className="btn btn-success rounded-pill" > {'< Contact Me />'} </Link>
                         </div>
                     </div>
                 </div>
             </div>
-            <br /><br />
+            <br /><br /><br />
         </Layout>
     )
 }
@@ -57,6 +58,7 @@ export const query = graphql`
             summary
             work
             address
+            website
           }
           social {
             email

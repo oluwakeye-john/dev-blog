@@ -5,7 +5,8 @@ module.exports = {
             name: `Oluwakeye John`,
             summary: `Just Trying to make the web a better place.`,
             work: `Fullstack web developer`,
-            address: `Lives in Lagos, Nigeria`
+            address: `Lives in Lagos, Nigeria`,
+            website: `oluwakeyejohn.netlify.app`
         },
         description: `My blog.`,
         siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -69,20 +70,13 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                //trackingId: `ADD YOUR TRACKING ID HERE`,
-            },
-        },
-        `gatsby-plugin-feed`,
-        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Gatsby Starter Blog`,
                 short_name: `GatsbyJS`,
                 start_url: `/`,
                 background_color: `#ffffff`,
-                theme_color: `#663399`,
+                theme_color: `#ffffff`,
                 display: `minimal-ui`,
                 icon: `content/assets/gatsby-icon.png`,
             },

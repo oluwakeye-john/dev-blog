@@ -1,5 +1,10 @@
+@import "../variables";
 footer {
   text-align: center;
   padding: 20px;
   color: white;
+
+  a {
+    color: white
+  }
 }

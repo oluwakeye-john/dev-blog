@@ -1,6 +1,7 @@
 import React from "react";
 import './Footer.scss'
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import SocialButtons from "../SocialButtons";
 
 export default () => {
     const { site } = useStaticQuery(
@@ -24,9 +25,11 @@ export default () => {
     )
     return (
         <footer className="bg-dark">
-            © {new Date().getFullYear()}, Built with love by
+            © {new Date().getFullYear()}, Built by
             {` `}
             <a href="https://oluwakeyejohn.netlify.app" >{site.siteMetadata.author.name}</a>
+            <br />
+            <SocialButtons />
         </footer>
     );
 }

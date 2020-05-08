@@ -19,7 +19,9 @@ export default ({title}) => (
                     <Link to={'contact'} activeClassName={'active'} className="nav-link">Contact</Link>
 
                 </ul>
-                <SocialButtons />
+                <div className="rounded-pill" >
+                    <SocialButtons />
+                </div>
             </div>
         </div>
     </nav>

@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import { Link } from "gatsby"
+import React from "react";
 import Navbar from "./Navbar/Navbar";
 import './layout.scss'
 import Footer from "./Footer/Footer";
-import FixedButtons from "./FixedButtons";
+// import FixedButtons from "./FixedButtons";
 
 export default ({title, children}) =>  (
     <div>
-        <div id="pageTop" style={{minHeight: "90.7vh"}}>
+        <div id="pageTop" >
             <Navbar title={title} />
             <main>
                 <div className="container-fluid text-center">
@@ -16,6 +15,6 @@ export default ({title, children}) =>  (
             </main>
         </div>
         <Footer />
-        <FixedButtons />
+        {/*<FixedButtons />*/}
     </div>
 )

@@ -19,8 +19,8 @@ body{
   opacity: 0;
   transition: opacity 0.9s ease-in-out;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   background-color: forestgreen;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -35,12 +35,12 @@ body{
 
 }
 
-.aboutPage {
+.aboutPageImage {
   border-radius: 50%;
   transition: box-shadow 0.3s ease-in-out;
 }
 
-.aboutPage:hover{
+.aboutPageImage:hover{
   box-shadow: 0 0 10px deepskyblue;
 }
 
