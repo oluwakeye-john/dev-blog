@@ -32,7 +32,7 @@ export default ({data, location}) => {
                             <br/>
                             <SocialButtons size="big" />
                             <br />
-                            <Link to={'contact'} className="btn btn-success rounded-pill" > {'< Contact Me />'} </Link>
+                            <Link to={'contact'} className="btn btn-danger" > {'Contact Me'} </Link>
                         </div>
                     </div>
                 </div>

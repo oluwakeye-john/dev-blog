@@ -4,7 +4,7 @@ import {Link} from 'gatsby'
 import SocialButtons from "../SocialButtons";
 
 export default ({title}) => (
-    <nav className="navbar navbar-expand-lg navbar-light shadow-sm sticky-top ">
+    <nav className="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top bg-dark">
         <div className="container-fluid">
             <Link to='/' className="navbar-brand">Gatsby</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

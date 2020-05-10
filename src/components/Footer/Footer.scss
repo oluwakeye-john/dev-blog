@@ -1,8 +1,14 @@
 @import "../variables";
+
 footer {
   text-align: center;
   padding: 20px;
   color: white;
+
+  p {
+    font-family: "Liberation Mono";
+    font-size: larger;
+  }
 
   a {
     color: white

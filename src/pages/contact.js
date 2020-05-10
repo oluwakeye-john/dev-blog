@@ -26,7 +26,7 @@ export default () => (
                     <textarea rows={6} id="message" placeholder={'Type message here'} className="form-control" required name="message" />
                     <br /><br />
 
-                    <input type='submit' className='btn btn-success' />
+                    <input type='submit' className='btn btn-danger' />
                 </form>
                 <br />
             </div>

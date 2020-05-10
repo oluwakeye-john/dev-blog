@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: `Gatsby Starter Blog`,
+        title: `Blog`,
         author: {
             name: `Oluwakeye John`,
             summary: `Just Trying to make the web a better place.`,
@@ -75,8 +75,8 @@ module.exports = {
                 name: `Gatsby Starter Blog`,
                 short_name: `GatsbyJS`,
                 start_url: `/`,
-                background_color: `#ffffff`,
-                theme_color: `#ffffff`,
+                background_color: `#343A40`,
+                theme_color: `#343A40`,
                 display: `minimal-ui`,
                 icon: `content/assets/gatsby-icon.png`,
             },
