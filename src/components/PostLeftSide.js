@@ -19,13 +19,15 @@ export default ({post, previous, next, author}) => (
                 <h4>Related</h4>
             }
             {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                </Link>
+                <div>
+                    <Link to={previous.fields.slug} rel="prev" className="text-dark">
+                        ← {previous.frontmatter.title}
+                    </Link>
+                    <br />
+                </div>
             )}
-            <br />
             {next && (
-                <Link to={next.fields.slug} rel="next">
+                <Link to={next.fields.slug} rel="next" className="text-dark">
                     {next.frontmatter.title} →
                 </Link>
             )}

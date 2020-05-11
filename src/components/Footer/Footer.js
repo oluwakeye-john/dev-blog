@@ -3,7 +3,40 @@ import './Footer.scss'
 import { graphql, useStaticQuery } from "gatsby";
 import SocialButtons from "../SocialButtons";
 
-export default () => {
+const handleSubscribeForm = (e) => {
+    e.preventDefault()
+    const subscribeForm = document.getElementById('subscribe-form')
+    subscribeForm.reset()
+    const email = subscribeForm.email.value
+    let formData = new FormData()
+    formData.append('form-name', 'subscribe')
+    formData.append('email', email)
+
+    fetch('/', {
+        method: "POST",
+        body: formData
+    })
+        .then(resp => {
+            if (!resp.ok) {
+                throw Error('Error')
+            }
+            else {
+                return (
+                    resp.json()
+                )
+            }
+
+        })
+        .then(resp => {
+
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Error submitting form")
+        })
+}
+
+const Footer = () =>  {
     const { site } = useStaticQuery(
         graphql`
           query {
@@ -23,40 +56,43 @@ export default () => {
           }
         `
     )
+
     return (
         <footer className="bg-dark">
             <div className="container">
                 <div className="row">
-                <div className="col-lg-4 text-left">
-                    <p>Subscribe to my newsletter</p>
-                    <form>
-                        <div className="input-group">
-                            <input type="email" required placeholder="Email" className="form-control mr-2" />
-                            <br />
-                            <input type="submit" className="btn btn-danger" />
-                        </div>
-                    </form>
-                </div>
+                    <div className="col-lg-4 text-left">
+                        <p className="mt-1" style={{ fontFamily: "Open Sans" }}>Subscribe to my newsletter</p>
+                        <form method="POST" id="subscribe-form" onSubmit={handleSubscribeForm}>
+                            <div className="input-group">
+                                <input type="email" name="email" required placeholder="Email" className="form-control mr-2"/>
+                                <br/>
+                                <input type="submit" className="btn btn-danger"/>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
 
                 <div className="row">
                     <div className="col-lg-4 text-left">
-                        <br />
+                        <br/>
                         © {new Date().getFullYear()}, Built by
                         {` `}
-                        <a href="https://oluwakeyejohn.netlify.app" >{site.siteMetadata.author.name}</a>
+                        <a href="https://oluwakeyejohn.netlify.app">{site.siteMetadata.author.name}</a>
                     </div>
                     <div className="col-lg-4">
 
                     </div>
                     <div className="col-lg-4">
-                        <br />
-                        <SocialButtons />
+                        <br/>
+                        <SocialButtons/>
                     </div>
                 </div>
             </div>
-            <br />
+            <br/>
         </footer>
     );
 }
+
+export default Footer

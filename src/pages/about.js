@@ -2,7 +2,6 @@ import React from "react";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import Img from 'gatsby-image'
-import SocialButtons from "../components/SocialButtons";
 import {Link} from 'gatsby'
 
 export default ({data, location}) => {
