@@ -63,7 +63,7 @@ const Footer = () =>  {
                 <div className="row">
                     <div className="col-lg-4 text-left">
                         <p className="mt-1" style={{ fontFamily: "Open Sans" }}>Subscribe to my newsletter</p>
-                        <form method="POST" id="subscribe-form" onSubmit={handleSubscribeForm}>
+                        <form id="subscribe-form" onSubmit={handleSubscribeForm}>
                             <div className="input-group">
                                 <input type="email" name="email" required placeholder="Email" className="form-control mr-2"/>
                                 <br/>
