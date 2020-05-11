@@ -50,7 +50,7 @@ class Navigation extends Component{
         return (
             <div className="navigation-wrapper">
                 <Sidebar menuItems={this.props.menuItems} isMenuOpen={this.isMenuOpen} isOpen={this.state.menuOpen}  />
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark " style={{backgroundColor: this.props.backgroundColor || "white"}}>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style={{backgroundColor: this.props.backgroundColor || "white"}}>
                     <div className="container">
                         <Link to='/' style={{color: this.props.color || "black"}} className="navbar-brand">Gatsby</Link>
                         <button className="navbar-toggler" onClick={this.toggleMenuOpen} style={{border: "0"}}>

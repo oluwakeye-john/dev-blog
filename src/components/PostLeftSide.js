@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 export default ({post, previous, next, author}) => (
-    <div className="position-fixed " style={{width: "220px"}}>
+    <div className="position-fixed" style={{width: "200px"}}>
         <div className="container-fluid" >
             <br />
             <h4 className="text-center">{post.frontmatter.title}</h4>
@@ -13,7 +13,11 @@ export default ({post, previous, next, author}) => (
 
             <hr /><br />
 
-            <h4>Related</h4>
+            {
+                previous || next
+                &&
+                <h4>Related</h4>
+            }
             {previous && (
                 <Link to={previous.fields.slug} rel="prev">
                     ← {previous.frontmatter.title}

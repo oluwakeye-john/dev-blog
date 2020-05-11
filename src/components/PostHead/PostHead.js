@@ -22,7 +22,7 @@ export default ({post, data, author}) => (
             </h1>
             <p>{post.frontmatter.description}</p>
             <p>
-                {post.frontmatter.date} - {post.timeToRead} min read
+                {post.frontmatter.date} • {post.timeToRead} min read
             </p>
             <p>
                 By <Link to={'about'}>{post.frontmatter.author || author.name }</Link>

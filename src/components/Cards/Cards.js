@@ -20,18 +20,19 @@ export default ({node, defaultImage}) => {
                             node.frontmatter.featuredImage
                                 ? <Img className="card-img-top img-fluid bbb "  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}/>
                                 : <Img className="card-img-top img-fluid bbb" fluid={defaultImage} />
-
                         }
-
-                        <div className="card-body">
-                            <h5 className="card-title">{title}</h5>
-                            <span dangerouslySetInnerHTML={{ __html: description, }}/>
-                        </div>
-
-                        <div className="card-footer">
-                            <small className="text-muted">Last updated {node.frontmatter.date}</small>
-                        </div>
                     </Link>
+
+                    <div className="card-body">
+                        <Link to={node.fields.slug} style={{color: "inherit"}}>
+                            <h5 className="card-title">{title}</h5>
+                        </Link>
+                        <span dangerouslySetInnerHTML={{ __html: description, }}/>
+                    </div>
+
+                    <div className="card-footer">
+                        <small className="text-muted">Last updated {node.frontmatter.date}</small>
+                    </div>
                 </div>
                 <br /><br />
             </div>

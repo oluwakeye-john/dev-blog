@@ -16,13 +16,15 @@ export default ({data, location}) => {
                         <br />
                         <Img style={{margin: "auto 0"}} className="img-fluid aboutPageImage" fluid={data.avatar.childImageSharp.fluid}/>
                     </div>
+                    <div className="col-lg-2">
+
+                    </div>
                     <div className="col-lg-6">
-                        <div className="container text-center">
+                        <div className="container text-left">
                             <br />
                             <h1 className="text-muted">{author.name}</h1>
                             <hr /><br />
                             <p> <span className="fas fa-tools"> </span> {author.work}</p>
-                            <p><span className="fas fa-home"> </span> {author.address}</p>
                             <p><span className="fas fa-envelope"> </span>
                                 <a href={`mailto:${social.email}`}> {social.email}</a>
                             </p>
@@ -30,8 +32,6 @@ export default ({data, location}) => {
                                 <a href="https://oluwakeyejohn.netlify.app"> {author.website}</a>
                             </p>
                             <br/>
-                            <SocialButtons size="big" />
-                            <br />
                             <Link to={'contact'} className="btn btn-danger" > {'Contact Me'} </Link>
                         </div>
                     </div>

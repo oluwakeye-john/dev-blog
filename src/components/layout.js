@@ -22,6 +22,8 @@ export default ({title, children}) =>  (
     <div>
         <div id="pageTop" >
             <Navigation menuItems={menuItems} title={title} color="white" />
+            <br /><br />
+            <br />
             <main>
                 <div className="container-fluid text-center">
                     {children}
