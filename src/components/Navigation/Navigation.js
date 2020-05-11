@@ -5,7 +5,7 @@ import { slide as Menu } from "react-burger-menu"
 import SocialButtons from "../SocialButtons";
 
 const Sidebar = ({isMenuOpen, isOpen, menuItems}) => (
-    <Menu width={window.innerWidth} onStateChange={isMenuOpen} disableAutoFocus right customBurgerIcon={false} isOpen={isOpen}>
+    <Menu width={typeof window !== 'undefined' ? window.innerWidth : 250} onStateChange={isMenuOpen} disableAutoFocus right customBurgerIcon={false} isOpen={isOpen}>
         {
             menuItems.map((item, index) => (
                 <div key={index} className="text-center" >
