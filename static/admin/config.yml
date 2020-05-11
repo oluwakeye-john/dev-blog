@@ -17,6 +17,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Cover Image", name: "featuredImage", widget: "image", media_library: {config: {multiple: false}}  }
+      - { label: "Categories", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"} }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["Uncategorized"] }
