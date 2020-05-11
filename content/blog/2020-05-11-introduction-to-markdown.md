@@ -11,8 +11,9 @@ Markdown is the editor of the web.
 
 Here is a sample
 
-`function hello(e) {`
-
-`    print(e)`
-
-`}`
+```javascript
+function hello(e) {
+    console.log(e)
+}
+hello("1234")
+```
