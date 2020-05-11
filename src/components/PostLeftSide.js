@@ -14,7 +14,7 @@ export default ({post, previous, next, author}) => (
             <hr /><br />
 
             {
-                previous || next
+                (previous || next)
                 &&
                 <h4>Related</h4>
             }
