@@ -1,10 +1,11 @@
 import React from "react";
 import Cards from "../Cards/Cards";
 
-export default ({posts, defaultImage, count}) => (
+export default ({posts, defaultImage, count, message}) => (
     <div>
         <div className="container-fluid">
-            <p className="text-left">Latest Posts ({`${count}`})</p>
+            <h6 className="text-left">{message || "Latest Posts"} ({`${count}`})</h6>
+            <br />
             <div className="row">
                 {
                     posts.map(({ node }, index) => (

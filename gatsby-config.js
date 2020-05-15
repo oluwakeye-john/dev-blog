@@ -9,7 +9,7 @@ module.exports = {
             website: `oluwakeyejohn.netlify.app`
         },
         description: `My blog.`,
-        siteUrl: `https://aboutjohn.netlify.com/`,
+        siteUrl: `https://aboutjohn.netlify.com`,
         social: {
             twitter: `oluwakeyejohn`,
             github: `oluwakeye-john`,

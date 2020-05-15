@@ -20,15 +20,22 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       : data.file
 
 
+  const imageSrc = (image && image.childImageSharp.fluid.src)
+  const seo_image = imageSrc;
+
+
+  const href = post.fields.slug
+
   return (
     <Layout title={siteTitle}>
 
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={image}
-
+        thumbnail={seo_image}
+        href={href}
       />
+
       <div className="row">
         <div className="col-lg-2">
           <div className="sidebar">
@@ -84,6 +91,9 @@ export const pageQuery = graphql`
       tableOfContents (
         maxDepth: 3
       )
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

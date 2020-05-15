@@ -1,40 +1,31 @@
 import React from "react"
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-
+import AllPosts from '../components/AllPosts/AllPosts'
 import { Link, graphql } from "gatsby"
 
 const Tags = ({ pageContext, data, location }) => {
-    const { tag } = pageContext
-    const { edges, totalCount } = data.allMarkdownRemark
+  const { tag } = pageContext
+  const { edges, totalCount } = data.allMarkdownRemark
 
 
-    const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title
 
-    return (
-        <Layout title={siteTitle} location={location}>
-            <SEO title={tag} />
+  return (
+    <Layout title={siteTitle} location={location}>
+      <SEO title={tag} />
 
-            <div className="text-left container">
-                <h1>{tag}</h1>
-                <br />
-                <ul className="list-group">
-                    {edges.map(({ node }) => {
-                        const { slug } = node.fields
-                        const { title } = node.frontmatter
-                        return (
-                            <li key={slug} className="list-group-item">
-                                <Link to={slug}>{title}</Link>
-                            </li>
-                        )
-                    })}
-                </ul>
+      <div className="text-left container">
+        
+        <br />
+      
+        <AllPosts message={`Posts tagged with ${tag}`} count={totalCount} posts={edges} defaultImage={data.file.childImageSharp.fluid} />
 
-                <br />
-                <Link to="/tags">All tags</Link>
-            </div>
-        </Layout>
-    )
+        <br />
+        <Link to="/tags">All tags</Link>
+      </div>
+    </Layout>
+  )
 }
 
 export default Tags
@@ -45,6 +36,16 @@ export const pageQuery = graphql`
         siteMetadata {
           title
         }
+    }
+
+    file(relativePath: { eq: "default.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
 
     allMarkdownRemark(
@@ -59,7 +60,16 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
+            description
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
