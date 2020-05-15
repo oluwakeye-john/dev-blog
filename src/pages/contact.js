@@ -53,28 +53,27 @@ class Contact extends Component{
         return (
             <Layout title={'title'}>
                 <SEO title={'Contact'}/>
-                <h1 className="text-muted">Get In Touch</h1>
+                <h1 className="">Get In Touch</h1>
                 <hr/>
                 <br/>
-                <div className="row text-center text-muted">
+                <div className="row text-center">
                     <div className="col-lg-4">
                     </div>
                     <div className="col-lg-4">
                         <form className="text-left" method="post" id="contact-form" onSubmit={this.handleContactForm}>
-                            <input type="hidden" name="form-name" value="contact"/>
-
-                            <label htmlFor="name">Name</label>
-                            <input type={'text'} className="form-control" placeholder={'John Doe'} required
+                            
+                            <label>Name</label>
+                            <input type={'text'} className="form-control input-border"  required
                                    name="name"/>
                             <br/>
 
-                            <label htmlFor="name">Email</label>
-                            <input type={'email'} id="email" className="form-control" placeholder={'mail@email.com'}
+                            <label>Email</label>
+                            <input type={'email'}  className="form-control input-border" 
                                    required name="email"/>
                             <br/>
 
-                            <label htmlFor="name">Message</label>
-                            <textarea rows={6} id="message" placeholder={'Type message here'} className="form-control"
+                            <label>Message</label>
+                            <textarea rows={6}  className="form-control input-border"
                                       required name="message"/>
                             <br/><br/>
 

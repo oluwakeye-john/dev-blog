@@ -13,7 +13,7 @@ export default ({post, previous, next, author}) => (
 
             <hr /><br />
 
-            {
+            {/* {
                 (previous || next)
                 &&
                 <h4>Related</h4>
@@ -30,7 +30,7 @@ export default ({post, previous, next, author}) => (
                 <Link to={next.fields.slug} rel="next" className="text-dark">
                     {next.frontmatter.title} →
                 </Link>
-            )}
+            )} */}
         </div>
     </div>
 )

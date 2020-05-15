@@ -9,6 +9,10 @@ const menuItems = [
         url: "/"
     },
     {
+        name: "Tags",
+        url: "/tags"
+    },
+    {
         name: "About",
         url: "/about"
     },
@@ -20,7 +24,7 @@ const menuItems = [
 
 export default ({title, children}) =>  (
     <div>
-        <div id="pageTop" >
+        <div id="pageTop" style={{minHeight: "70vh"}}>
             <Navigation menuItems={menuItems} title={title} color="white" />
             <br /><br />
             <br />

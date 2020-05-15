@@ -5,11 +5,11 @@ import { slide as Menu } from "react-burger-menu"
 import SocialButtons from "../SocialButtons";
 
 const Sidebar = ({isMenuOpen, isOpen, menuItems}) => (
-    <Menu width={typeof window !== 'undefined' ? window.innerWidth : 250} onStateChange={isMenuOpen} disableAutoFocus right customBurgerIcon={false} isOpen={isOpen}>
+    <Menu width={'100%'} onStateChange={isMenuOpen} disableAutoFocus right customBurgerIcon={false} isOpen={isOpen}>
         {
             menuItems.map((item, index) => (
                 <div key={index} className="text-center" >
-                    <Link activeClassName='menu-active' style={{color: "white"}} className="menu-item" to={item.url}>
+                    <Link activeClassName='menu-active' style={{color: "white"}} className="menu-item def-menu" to={item.url}>
                         <span className={item.icon}> </span> {item.name}
                     </Link>
                     <hr />
@@ -61,8 +61,9 @@ class Navigation extends Component{
                             <ul className="navbar-nav ml-auto"  data-toggle="collapse" data-target=".navbar-collapse.show">
                                 {
                                     this.props.menuItems.map((item, index) => (
-                                        <Link style={{color: this.props.color || "black"}} key={index} activeClassName='menu-active' className="nav-link" to={item.url}>
-                                            <span className={item.icon}> </span> {item.name}
+                                        <Link style={{color: this.props.color || "black"}} key={index} activeClassName='menu-active' className="nav-link def-menu" to={item.url}>
+                                            <span className={`${item.icon}`} />
+                                            <span>{item.name}</span>
                                         </Link>
                                     ))
                                 }

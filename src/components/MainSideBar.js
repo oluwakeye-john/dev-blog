@@ -1,12 +1,43 @@
 import React from "react";
+import kebabCase from "lodash/kebabCase"
+import { Link, useStaticQuery } from 'gatsby'
 
-export default () => (
-    <div className="text-left">
-        <br />
-        <h2 className="text-center">Hi there!</h2>
-        <hr />
-        <p>Subscribe to this newsletter</p>
-        <input type="email" className="form-control" placeholder="Email" />
-        <button className="btn btn-success mt-2" >Subscribe</button>
-    </div>
-)
+const MainSideBar = () => {
+    const result = useStaticQuery(graphql`
+    query {
+        site {
+            siteMetadata {
+              title
+            }
+          }
+          allMarkdownRemark(limit: 2000) {
+            group(field: frontmatter___tags) {
+              fieldValue
+              totalCount
+            }
+          }
+    }
+  `)
+
+    const group = result.allMarkdownRemark.group
+
+    return (
+        <div className="text-left">
+            <br />
+            <h3 className="text-center">Tags</h3>
+            <br />
+            <ul className="list-group">
+                {group.map(tag => (
+                    <li key={tag.fieldValue} className="list-group-item">
+                        <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                            {tag.fieldValue} ({tag.totalCount})
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    )
+
+}
+
+export default MainSideBar

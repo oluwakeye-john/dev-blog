@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, title }) => {
+const SEO = ({ description, lang, meta, title, thumbnail }) => {
     const { site } = useStaticQuery(
         graphql`
           query {
@@ -28,6 +28,16 @@ const SEO = ({ description, lang, meta, title }) => {
     )
 
     const metaDescription = description || site.siteMetadata.description
+    const imageSrc = (thumbnail && thumbnail.childImageSharp.fluid.src)
+
+    let origin = "";
+    let href = "";
+    if (typeof window !== "undefined") {
+        origin = window.location.origin;
+        href = window.location.href;
+    }
+
+    const image = origin + imageSrc;
 
     return (
         <Helmet
@@ -50,12 +60,17 @@ const SEO = ({ description, lang, meta, title }) => {
                     content: metaDescription,
                 },
                 {
+                    property: `og:url`,
+                    content: href,
+                },
+                {
                     property: `og:type`,
                     content: `website`,
                 },
                 {
                     name: `twitter:card`,
-                    content: `summary`,
+                    // content: `summary`,
+                    content: `summary_large_image`,
                 },
                 {
                     name: `twitter:creator`,
@@ -69,6 +84,10 @@ const SEO = ({ description, lang, meta, title }) => {
                     name: `twitter:description`,
                     content: metaDescription,
                 },
+                {
+                    name: `twitter:image`,
+                    content: image,
+                  },
             ].concat(meta)}
         />
     )
@@ -85,6 +104,7 @@ SEO.propTypes = {
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
     title: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string,
 }
 
 export default SEO

@@ -1,26 +1,31 @@
-# A JAMstack Blog
+# My Blog
 
-A static 
-By Oluwakeye John
+`A blazing fast, blog with CMS and comment support`
 
-## Toolchains
+By [Oluwakeye John](https://oluwakeyejohn.netlify.app)
+
+[Demo](https://demo.com) 
+
+### Toolchains
 - React
-- Gatsby
+- [Gatsby](https://gatsbyjs.prg)
 - Netlify CMS
+- Disqus
 
-## Features
-- Built with react and gatsby
-- Integrated Netlify Form Submission
-- Integrated Netlify Identity for authentication 
+### Features
+- Blazing fast
+- Image optimization with gatsby-image
+- Form processing
 - Integrated Netlify CMS 
+- Comments with Disqus
 
-## Usage
+### Usage
 - Clone this repo
+- input disqus name
 - Run the code below
     ```shell script
       npm install
       npm run dev
     ```
-
 
 Thanks

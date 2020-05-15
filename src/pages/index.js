@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import AllPosts from "../components/AllPosts/AllPosts";
-// import MainSideBar from "../components/MainSideBar";
+import MainSideBar from "../components/MainSideBar";
 
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title
@@ -14,9 +14,9 @@ const BlogIndex = ({ data, location }) => {
         <Layout location={location} title={siteTitle}>
             <SEO title="Home" />
             <div className="row">
-                <div className="col-lg-1">
+                {/* <div className="col-lg-1">
 
-                </div>
+                </div> */}
                 <div className="col-lg-10">
                     {
                         posts.length !== 0
@@ -30,8 +30,8 @@ const BlogIndex = ({ data, location }) => {
                             </div>
                     }
                 </div>
-                <div className="col-lg-1">
-                    {/*<MainSideBar />*/}
+                <div className="col-lg-2">
+                    <MainSideBar />
                 </div>
             </div>
             <br /><br />
