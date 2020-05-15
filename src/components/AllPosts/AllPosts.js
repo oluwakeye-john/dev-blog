@@ -1,10 +1,10 @@
 import React from "react";
 import Cards from "../Cards/Cards";
 
-export default ({posts, defaultImage, count, message}) => (
+export default ({posts, defaultImage, message}) => (
     <div>
         <div className="container-fluid">
-            <h6 className="text-left">{message || "Latest Posts"} ({`${count}`})</h6>
+            <h6 className="text-left">{message || "Latest Posts"} ({`${posts.length}`})</h6>
             <br />
             <div className="row">
                 {
