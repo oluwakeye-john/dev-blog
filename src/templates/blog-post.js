@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
 
   const imageSrc = (image && image.childImageSharp.fluid.src)
-  const seo_image = imageSrc;
+  const seo_image = imageSrc; 
 
 
   const href = post.fields.slug
