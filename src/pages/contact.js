@@ -62,18 +62,18 @@ class Contact extends Component{
                     <div className="col-lg-4">
                         <form className="text-left" method="post" id="contact-form" onSubmit={this.handleContactForm}>
                             
-                            <label>Name</label>
-                            <input type={'text'} className="form-control input-border"  required
+                            <label htmlFor="name">Name</label>
+                            <input id="name" type={'text'} className="form-control input-border"  required
                                    name="name"/>
                             <br/>
 
-                            <label>Email</label>
-                            <input type={'email'}  className="form-control input-border" 
+                            <label htmlFor="email">Email</label>
+                            <input id="email" type={'email'}  className="form-control input-border" 
                                    required name="email"/>
                             <br/>
 
-                            <label>Message</label>
-                            <textarea rows={6}  className="form-control input-border"
+                            <label htmlFor="message">Message</label>
+                            <textarea id="message" rows={6}  className="form-control input-border"
                                       required name="message"/>
                             <br/><br/>
 

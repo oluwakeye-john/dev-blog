@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 export default ({post, previous, next, author}) => (
     <div className="position-fixed" style={{width: "200px"}}>
@@ -13,24 +12,6 @@ export default ({post, previous, next, author}) => (
 
             <hr /><br />
 
-            {/* {
-                (previous || next)
-                &&
-                <h4>Related</h4>
-            }
-            {previous && (
-                <div>
-                    <Link to={previous.fields.slug} rel="prev" className="text-dark">
-                        ← {previous.frontmatter.title}
-                    </Link>
-                    <br />
-                </div>
-            )}
-            {next && (
-                <Link to={next.fields.slug} rel="next" className="text-dark">
-                    {next.frontmatter.title} →
-                </Link>
-            )} */}
         </div>
     </div>
 )

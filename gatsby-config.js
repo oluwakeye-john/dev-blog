@@ -6,10 +6,10 @@ module.exports = {
             summary: `Just Trying to make the web a better place.`,
             work: `Fullstack web developer`,
             address: `Lives in Lagos, Nigeria`,
-            website: `oluwakeyejohn.netlify.app`
+            website: `https://oluwakeyejohn.netlify.app`
         },
         description: `My blog.`,
-        siteUrl: `oluwakeye-ecommerce.netlify.app`,
+        siteUrl: `https://oluwakeye-ecommerce.netlify.app`,
         social: {
             twitter: `oluwakeyejohn`,
             github: `oluwakeye-john`,
@@ -73,8 +73,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `About John`,
-                short_name: `About John`,
+                name: `My Blog`,
+                short_name: `Blog`,
                 start_url: `/`,
                 background_color: `#343A40`,
                 theme_color: `#343A40`,
