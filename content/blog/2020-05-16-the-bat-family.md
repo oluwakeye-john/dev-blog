@@ -9,16 +9,10 @@ description: The rise of the bats
 ---
 The bat family comprises of the following:
 
-1. Batman
-
+1. Batman(leader)
 2. Nightwing
-
 3. Robin
-
 4. Red Robin
-
 5. Batwoman
-
 6. Batgirl
-
 7. Batwing
