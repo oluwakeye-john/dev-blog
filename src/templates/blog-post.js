@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PostHead from "../components/PostHead/PostHead";
+import PostHead from "../components/PostHead";
 import PostExtras from "../components/PostExtras/PostExtras";
 import TableOfContent from "../components/TableOfContent/TableOfContent";
 import PostLeftSide from "../components/PostLeftSide";

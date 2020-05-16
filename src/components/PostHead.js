@@ -1,8 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
-import './PostHead.scss'
-import TagView from '../TagView/TagView'
+import TagView from './TagView/TagView'
 
 export default ({ post, data, author }) => {
     return (
