@@ -3,7 +3,7 @@ module.exports = {
         title: `Blog`,
         author: {
             name: `Oluwakeye John`,
-            summary: `Just Trying to make the web a better place.`,
+            summary: `Making the web better.`,
             work: `Fullstack web developer`,
             address: `Lives in Lagos, Nigeria`,
             website: `https://oluwakeyejohn.netlify.app`

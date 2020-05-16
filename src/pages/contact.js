@@ -77,7 +77,7 @@ class Contact extends Component{
                                       required name="message"/>
                             <br/><br/>
 
-                            <button type='submit' className='btn btn-danger'>
+                            <button type='submit' className='btn btn-danger' style={{borderRadius:"0"}}>
                                 {
                                     this.state.fetching
                                     &&

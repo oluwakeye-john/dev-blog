@@ -7,6 +7,7 @@ import PostHead from "../components/PostHead";
 import PostExtras from "../components/PostExtras/PostExtras";
 import TableOfContent from "../components/TableOfContent/TableOfContent";
 import PostLeftSide from "../components/PostLeftSide";
+import Bio from '../components/bio'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -47,7 +48,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
           <PostHead post={post} data={data} author={author} />
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
+          <hr /><br />
+          <Bio />
           <PostExtras previous={previous} next={next} />
         </div>
 
