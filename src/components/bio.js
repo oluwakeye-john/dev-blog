@@ -37,15 +37,15 @@ const Bio = () => {
         }}
       />
       <p>
-        <Link to="/about" style={{color: "inherit"}}>
+        <Link to="/about" style={{ color: "inherit" }}>
           <strong>{author.name}</strong>
         </Link>
         <br />
         {author.summary}
-        <br />
-        {/* <a href={`https://twitter.com/${social.twitter}`}>
-                    You should follow him on Twitter
-                </a> */}
+        <br /><br />
+        <a href={`https://twitter.com/${social.twitter}`}>
+          <button className="btn btn-outline-primary btn-sm pl-5 pr-5">Follow</button>
+                </a>
       </p>
     </div>
   )

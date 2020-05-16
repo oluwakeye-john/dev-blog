@@ -24,7 +24,7 @@ export default ({ data, location }) => {
               <h1 className="text-muted">{author.name}</h1>
               <hr /><br />
               
-              <code className="text-center about-quote">{author.summary}</code>
+              <code className="text-center about-quote"><i>`{author.summary}`</i></code>
 
               <br />
               <br />
