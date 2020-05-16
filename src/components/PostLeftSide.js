@@ -1,4 +1,5 @@
 import React from "react";
+import TagView from './TagView/TagView'
 
 export default ({post, previous, next, author}) => (
     <div className="position-fixed" style={{width: "200px"}}>
@@ -10,7 +11,9 @@ export default ({post, previous, next, author}) => (
             <p className="text-left">{post.timeToRead} min read</p>
             <p className="text-left">By {post.frontmatter.author || author.name}</p>
 
-            <hr /><br />
+            <hr />
+
+            <TagView tags={post.frontmatter.tags} split={true} />
 
         </div>
     </div>

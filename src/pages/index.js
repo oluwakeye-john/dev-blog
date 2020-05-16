@@ -25,9 +25,11 @@ class BlogIndex extends Component {
     const posts = this.props.data.allMarkdownRemark.edges || []
 
     const filteredData = posts.filter(post => {
-      const { title, description } = post.node.frontmatter;
+      const { title, description, tags } = post.node.frontmatter;
+      
       return (
         title.toLowerCase().includes(query) || description.toLowerCase().includes(query)
+        || (tags && tags.join(' ').toLowerCase().includes(query))
       )
     })
 
@@ -110,6 +112,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
             featuredImage {
               childImageSharp {
                 fluid {
