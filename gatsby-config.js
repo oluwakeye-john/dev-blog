@@ -9,7 +9,7 @@ module.exports = {
             website: `oluwakeyejohn.netlify.app`
         },
         description: `My blog.`,
-        siteUrl: `https://aboutjohn.netlify.com`,
+        siteUrl: `oluwakeye-ecommerce.netlify.app`,
         social: {
             twitter: `oluwakeyejohn`,
             github: `oluwakeye-john`,
@@ -73,8 +73,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Gatsby Starter Blog`,
-                short_name: `GatsbyJS`,
+                name: `About John`,
+                short_name: `About John`,
                 start_url: `/`,
                 background_color: `#343A40`,
                 theme_color: `#343A40`,
