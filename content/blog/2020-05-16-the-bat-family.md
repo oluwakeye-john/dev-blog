@@ -1,7 +1,7 @@
 ---
 title: The Bat family
 date: 2020-05-16T02:07:54.423Z
-featuredImage: /img/bat1.jpg
+featuredImage: /img/bat3.jpg
 tags:
   - batman
   - superhero
