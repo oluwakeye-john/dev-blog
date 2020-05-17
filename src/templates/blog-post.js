@@ -8,6 +8,9 @@ import PostExtras from "../components/PostExtras/PostExtras";
 import TableOfContent from "../components/TableOfContent/TableOfContent";
 import PostLeftSide from "../components/PostLeftSide";
 import Bio from '../components/bio'
+import { DiscussionEmbed } from "disqus-react"
+
+
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -26,6 +29,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
 
   const href = post.fields.slug
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: post.fields.slug },
+  }
 
   return (
     <Layout title={siteTitle}>
@@ -50,6 +58,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr /><br />
           <Bio />
+          <br />
+          <DiscussionEmbed {...disqusConfig} />
+          <br />
           <PostExtras previous={previous} next={next} />
         </div>
 
