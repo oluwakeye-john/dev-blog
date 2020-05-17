@@ -3,7 +3,7 @@ import kebabCase from "lodash/kebabCase"
 import { Link, useStaticQuery } from 'gatsby'
 
 const MainSideBar = () => {
-    const result = useStaticQuery(graphql`
+  const result = useStaticQuery(graphql`
     query {
         site {
             siteMetadata {
@@ -19,26 +19,33 @@ const MainSideBar = () => {
     }
   `)
 
-    const group = result.allMarkdownRemark.group
+  const group = result.allMarkdownRemark.group
+  const top = group.slice(0, 5);
 
-    return (
-        <div className="text-left">
-            <br />
+  return (
+    <div className="text-left">
+      <br /><br />
 
 
-            <h3 className="text-center">Tags</h3>
-            <br />
-            <ul className="list-group">
-                {group.map(tag => (
-                    <li key={tag.fieldValue} className="list-group-item">
-                        <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                            {tag.fieldValue} ({tag.totalCount})
+      <h3 className="text-center">Tags</h3>
+      <br />
+      <ul className="list-group">
+        {top.map(tag => (
+          <li key={tag.fieldValue} className="list-group-item">
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} ({tag.totalCount})
                         </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+          </li>
+        ))}
+      </ul>
+
+      <br /><br />
+
+      <div className="text-center">
+        <Link to='/tags'>View More</Link>
+      </div>
+    </div>
+  )
 
 }
 

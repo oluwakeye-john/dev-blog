@@ -9,7 +9,7 @@ const TagView = ({ tags, split }) => (
             tags
             &&
             tags.map((tag, index) => (
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>
                     <span key={index} className="tag-class">{tag}</span>
                     {
                         split
