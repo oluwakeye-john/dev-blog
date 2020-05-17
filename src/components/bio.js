@@ -43,7 +43,7 @@ const Bio = () => {
         <br />
         {author.summary}
         <br /><br />
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a target="_blank" href={`https://twitter.com/${social.twitter}`}>
           <button className="btn btn-outline-primary btn-sm pl-5 pr-5">Follow</button>
                 </a>
       </p>
